@@ -1,0 +1,42 @@
+[
+  {
+    "id": "summarizing_1",
+    "task_type": "summarizing",
+    "prompt": "Summarize in one sentence: 'Ollama lets people run open-weight language models on their own computers. It downloads the model once and then works fully offline, so prompts never leave the machine.'",
+    "check": "contains_keywords",
+    "expected": ["ollama", "offline", "local", "computer", "private", "own"],
+    "min_matches": 2
+  },
+  {
+    "id": "summarizing_2",
+    "task_type": "summarizing",
+    "prompt": "Summarize in one sentence: 'The city library will open an hour earlier on weekdays starting in March so students can study before school. Weekend hours stay the same.'",
+    "check": "contains_keywords",
+    "expected": ["library", "earlier", "weekday", "march", "hour"],
+    "min_matches": 2
+  },
+  {
+    "id": "summarizing_3",
+    "task_type": "summarizing",
+    "prompt": "Give a one-sentence summary of this: 'Regular exercise improves heart health, lifts mood and helps people sleep better. Even a 20 minute daily walk makes a difference.'",
+    "check": "contains_keywords",
+    "expected": ["exercise", "walk", "heart", "mood", "sleep", "health"],
+    "min_matches": 2
+  },
+  {
+    "id": "summarizing_4",
+    "task_type": "summarizing",
+    "prompt": "Summarize in one sentence: 'Solar panels turn sunlight into electricity. They cost less each year and many homes now use them to cut power bills.'",
+    "check": "contains_keywords",
+    "expected": ["solar", "sunlight", "electricity", "bill", "cost", "panel"],
+    "min_matches": 2
+  },
+  {
+    "id": "summarizing_5",
+    "task_type": "summarizing",
+    "prompt": "Summarize in one sentence: 'The team shipped version 2.0 of the app on Friday. It adds dark mode, fixes the login bug and loads pages twice as fast.'",
+    "check": "contains_keywords",
+    "expected": ["2.0", "dark mode", "login", "faster", "fast", "shipped", "released"],
+    "min_matches": 2
+  }
+]

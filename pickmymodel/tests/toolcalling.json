@@ -1,0 +1,37 @@
+[
+  {
+    "id": "toolcalling_1",
+    "task_type": "tool_calling",
+    "prompt": "You can call this tool: get_weather(city: string). The user asks: 'What is the weather in Mumbai?' Reply with JSON only in the form {\"tool\": \"get_weather\", \"arguments\": {\"city\": \"...\"}}",
+    "check": "tool_call",
+    "expected": {"tool": "get_weather", "arguments": ["city"]}
+  },
+  {
+    "id": "toolcalling_2",
+    "task_type": "tool_calling",
+    "prompt": "You can call this tool: add_numbers(a: number, b: number). The user asks: 'Add 7 and 5.' Reply with JSON only in the form {\"tool\": \"add_numbers\", \"arguments\": {\"a\": 0, \"b\": 0}}",
+    "check": "tool_call",
+    "expected": {"tool": "add_numbers", "arguments": ["a", "b"]}
+  },
+  {
+    "id": "toolcalling_3",
+    "task_type": "tool_calling",
+    "prompt": "You can call this tool: send_email(to: string, subject: string). The user asks: 'Email ravi@example.com with the subject Meeting.' Reply with JSON only in the form {\"tool\": \"send_email\", \"arguments\": {\"to\": \"...\", \"subject\": \"...\"}}",
+    "check": "tool_call",
+    "expected": {"tool": "send_email", "arguments": ["to", "subject"]}
+  },
+  {
+    "id": "toolcalling_4",
+    "task_type": "tool_calling",
+    "prompt": "You can call these tools: search_web(query: string) and set_timer(minutes: number). The user asks: 'Set a timer for 10 minutes.' Reply with JSON only in the form {\"tool\": \"<tool name>\", \"arguments\": {...}}",
+    "check": "tool_call",
+    "expected": {"tool": "set_timer", "arguments": ["minutes"]}
+  },
+  {
+    "id": "toolcalling_5",
+    "task_type": "tool_calling",
+    "prompt": "You can call these tools: search_web(query: string) and set_timer(minutes: number). The user asks: 'Look up the capital of France.' Reply with JSON only in the form {\"tool\": \"<tool name>\", \"arguments\": {...}}",
+    "check": "tool_call",
+    "expected": {"tool": "search_web", "arguments": ["query"]}
+  }
+]

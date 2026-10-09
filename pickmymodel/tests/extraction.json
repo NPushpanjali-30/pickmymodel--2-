@@ -1,0 +1,37 @@
+[
+  {
+    "id": "extraction_1",
+    "task_type": "extraction",
+    "prompt": "Extract the data from this text as JSON with keys name and age. Reply with JSON only. Text: 'Priya is 29 years old.'",
+    "check": "json_valid",
+    "expected": ["name", "age"]
+  },
+  {
+    "id": "extraction_2",
+    "task_type": "extraction",
+    "prompt": "Extract the data as JSON with keys city and country. Reply with JSON only. Text: 'The conference was held in Bengaluru, India.'",
+    "check": "json_valid",
+    "expected": ["city", "country"]
+  },
+  {
+    "id": "extraction_3",
+    "task_type": "extraction",
+    "prompt": "What is the email address in this text? Reply with only the email. Text: 'Contact us at help@example.com for support.'",
+    "check": "exact_match",
+    "expected": "help@example.com"
+  },
+  {
+    "id": "extraction_4",
+    "task_type": "extraction",
+    "prompt": "Extract the total from this receipt. Reply with only the number. Text: 'Coffee 3, Sandwich 7, Total 10'",
+    "check": "exact_match",
+    "expected": "10"
+  },
+  {
+    "id": "extraction_5",
+    "task_type": "extraction",
+    "prompt": "Extract the data as JSON with keys product and price. Reply with JSON only. Text: 'The notebook costs 45 rupees.'",
+    "check": "json_valid",
+    "expected": ["product", "price"]
+  }
+]

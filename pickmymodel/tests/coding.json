@@ -1,0 +1,40 @@
+[
+  {
+    "id": "coding_1",
+    "task_type": "coding",
+    "prompt": "Write a Python function named is_even(n) that returns True if n is even. Reply with code only.",
+    "check": "contains_keywords",
+    "expected": ["def is_even", "return"],
+    "min_matches": 2
+  },
+  {
+    "id": "coding_2",
+    "task_type": "coding",
+    "prompt": "Write a Python for loop that prints the numbers 0 to 4 using range. Reply with code only.",
+    "check": "contains_keywords",
+    "expected": ["for", "range", "print"],
+    "min_matches": 3
+  },
+  {
+    "id": "coding_3",
+    "task_type": "coding",
+    "prompt": "In Python, what does len([10, 20, 30]) return? Reply with only the number.",
+    "check": "exact_match",
+    "expected": "3"
+  },
+  {
+    "id": "coding_4",
+    "task_type": "coding",
+    "prompt": "Which Python keyword is used to define a function? Reply with only that one word.",
+    "check": "exact_match",
+    "expected": "def"
+  },
+  {
+    "id": "coding_5",
+    "task_type": "coding",
+    "prompt": "Write a Python function add(a, b) that returns the sum of a and b. Reply with code only.",
+    "check": "contains_keywords",
+    "expected": ["def add", "return"],
+    "min_matches": 2
+  }
+]
